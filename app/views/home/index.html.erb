@@ -1,0 +1,9 @@
+<h1>Log In Main Page</h1>
+<% unless user_signed_in? %>
+<a href ="/users/sign_in">Log In</a>
+<a href ="/users/sign_up">Register</a>
+<%else%>
+<%= current_user.email %>
+<a href ="/users/sign_out">Log Out</a>
+<%end%>
+
